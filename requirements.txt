@@ -1,0 +1,4 @@
+uvicorn
+cv2
+numpy
+fastapi
