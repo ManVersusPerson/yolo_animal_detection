@@ -1,3 +1,5 @@
+# Api routes
+
 ROUTES = {
     'file_mode': '/predict/img',
     'json_mode': '/predict/json',

@@ -6,10 +6,12 @@ IMG_EXTENSION = '.jpg'
 IMAGES_PATH = 'localhost:8000/image/'
 
 
+# Class for handling api requests
 class Dilivery():
     def __init__(self, predicted_result):
         self.predicted_result = predicted_result
 
+    # Return the processed image in binary type response
     def get_img_as_file(self, extension):
         image_buf = convert_image_to_bytes(
             self.predicted_result.plot(),
@@ -17,6 +19,7 @@ class Dilivery():
 
         return image_buf
 
+    # Return json response with detected names dict and link of processed image
     def get_img_info_as_json(self):
         img_id = f'{uuid.uuid4()}'
         names = self.get_names()
@@ -29,6 +32,7 @@ class Dilivery():
             'detected_objects': names
          }
 
+    # Helper method to get detected names dict
     def get_names(self):
         result = {}
 
