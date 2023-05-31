@@ -9,12 +9,12 @@ IMAGES_PATH = 'localhost:8000/image/'
 # Class for handling api requests
 class Dilivery():
     def __init__(self, predicted_result):
-        self.predicted_result = predicted_result
+        self.__predicted_result = predicted_result
 
     # Return the processed image in binary type response
     def get_img_as_file(self, extension):
         image_buf = convert_image_to_bytes(
-            self.predicted_result.plot(),
+            self.__predicted_result.plot(),
             extension)
 
         return image_buf
@@ -22,10 +22,10 @@ class Dilivery():
     # Return json response with detected names dict and link of processed image
     def get_img_info_as_json(self):
         img_id = f'{uuid.uuid4()}'
-        names = self.get_names()
+        names = self.__get_names()
         cv2.imwrite(
             f'output_images/{img_id}{IMG_EXTENSION}',
-            self.predicted_result.plot())
+            self.__predicted_result.plot())
 
         return {
             'img_url': IMAGES_PATH + img_id,
@@ -33,7 +33,7 @@ class Dilivery():
          }
 
     # Helper method to get detected names dict
-    def get_names(self):
+    def __get_names(self):
         result = {}
 
         for index in range(len(self.predicted_result.boxes)):
