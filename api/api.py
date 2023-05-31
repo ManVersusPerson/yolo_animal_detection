@@ -17,7 +17,7 @@ def get_img_file(file: UploadFile):
     delivery_result = Dilivery(predicted_result) \
         .get_img_as_file(file_extension)
 
-    return StreamingResponse((delivery_result), media_type="image/jpg")
+    return StreamingResponse((delivery_result), media_type="image/png")
 
 
 @app.post(ROUTES['json_mode'])
