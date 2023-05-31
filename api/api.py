@@ -25,7 +25,7 @@ def get_img_file(file: UploadFile):
 def get_json_with_names(file: UploadFile):
     file_buf = file.file
 
-    predicted_result = Model(file_buf).get_predicred_result()
+    predicted_result = Model(file_buf).get_predicted_result()
     delivery_result = Dilivery(predicted_result).get_img_info_as_json()
 
     return delivery_result
