@@ -1,4 +1,4 @@
-path: F:/datasets/yolo_animals
+path: ../../datasets/yolo_animals
 train: images/train
 val: images/test
 
