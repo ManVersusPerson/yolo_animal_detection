@@ -36,9 +36,9 @@ class Dilivery():
     def __get_names(self):
         result = {}
 
-        for index in range(len(self.predicted_result.boxes)):
-            box = int(self.predicted_result.boxes.cls[index])
-            name = self.predicted_result.names[box]
+        for index in range(len(self.__predicted_result.boxes)):
+            box = int(self.__predicted_result.boxes.cls[index])
+            name = self.__predicted_result.names[box]
             result[name] = result.get(name, 0) + 1
 
         return result
