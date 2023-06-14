@@ -13,7 +13,7 @@ client = TestClient(app)
 
 
 def test_upload_image_json_mode():
-    filename = "./img_test/Fish.jpg"
+    filename = "yolo_animal_detection\FISH.jpg"
     files = {"file": (open(filename, "rb"))}
     response = client.post(
         "/predict/json", files=files)

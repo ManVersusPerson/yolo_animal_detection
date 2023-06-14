@@ -2,7 +2,7 @@ from ultralytics import YOLO
 from typing import BinaryIO
 from file_utils import convert_file_to_image
 
-model = YOLO('model/model.pt')
+model = YOLO('yolo_animal_detection\model\model.pt')
 
 
 # Class for work with YOLO model
