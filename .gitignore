@@ -1,3 +1,2 @@
 __pycache__
-output_images/*.jpg
-*.jpg
+output_images/*
