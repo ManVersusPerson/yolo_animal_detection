@@ -11,6 +11,8 @@ app = FastAPI()
 # Initialize api app
 @app.post(ROUTES['file_mode'])
 def get_img_file(file: UploadFile):
+    if file.content_type not in ["image/jpeg", "image/png"]:
+        return {"error": "Only JPEG and PNG image files are allowed"}
     file_extension = extract_file_extension(file.filename)
     file_buf = file.file
 
@@ -23,6 +25,8 @@ def get_img_file(file: UploadFile):
 
 @app.post(ROUTES['json_mode'])
 def get_json_with_names(file: UploadFile):
+    if file.content_type not in ["image/jpeg", "image/png"]:
+        return {"error": "Only JPEG and PNG image files are allowed"}
     file_buf = file.file
 
     predicted_result = Model(file_buf).get_predicted_result()
