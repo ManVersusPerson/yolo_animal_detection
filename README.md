@@ -20,7 +20,7 @@
 1. Получить картинку с предсказаниями
 
 По адресу /predict/image отправляется POST-запрос, в теле сообщения отправляется файл формата jpg. 
-![image](https://github.com/ManVersusPerson/yolo_animal_detection/assets/105095657/db1cf8b3-ef75-40d5-ae3a-b6c70c1818e9)
+![image width="100" height="100"](https://github.com/ManVersusPerson/yolo_animal_detection/assets/105095657/db1cf8b3-ef75-40d5-ae3a-b6c70c1818e9)
 Нейросеть выполняет predict по картинке и ответ получаем:
 ![image](https://github.com/ManVersusPerson/yolo_animal_detection/assets/105095657/229f9c46-9ead-4512-9c05-7d072ee2e62b)
 
@@ -37,6 +37,6 @@
 ![image](https://github.com/ManVersusPerson/yolo_animal_detection/assets/105095657/fe2a4819-5d0f-4122-8496-c09a9a45b383)
 
 - Демо: http://80.89.228.14:666
-- Интерактивная документация: http://80.89.228.14:666/docs#/default/get_image_image__id__get
+- Интерактивная документация: http://80.89.228.14:666/docs
 - Использованная модель: https://github.com/ultralytics/ultralytics
 - Использованный датасет: https://www.kaggle.com/datasets/antoreepjana/animals-detection-images-dataset?datasetId=1316317&sortBy=dateRun&tab=profile
