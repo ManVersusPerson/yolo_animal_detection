@@ -5,3 +5,4 @@ numpy
 fastapi
 httpx
 pillow
+python-multipart
