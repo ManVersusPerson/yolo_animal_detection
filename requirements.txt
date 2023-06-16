@@ -3,3 +3,6 @@ opencv-python
 ultralytics
 numpy
 fastapi
+httpx
+pillow
+python-multipart
