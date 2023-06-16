@@ -10,7 +10,7 @@ model.train(
     val=True,
     batch=64,
     imgsz=640,
-    weight_path='../model'
+    weight_path='../model',
     weight_name='model'
 )  # train the model
 
