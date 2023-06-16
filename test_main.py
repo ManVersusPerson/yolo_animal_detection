@@ -3,7 +3,7 @@ from api.api import app
 
 client = TestClient(app)
 test_filename = ("./img_test/Fish.jpg", "./img_test/Fox.jpg")
-ROUTES = ('/predict/img', '/predict/json',)
+ROUTES = ('/predict/img', '/predict/json')
 
 
 def test_upload_image():
