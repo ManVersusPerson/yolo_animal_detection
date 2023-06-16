@@ -18,5 +18,3 @@ def test_upload_image_json_mode():
     response = client.post(
         "/predict/json", files=files)
     assert response.status_code == 200
-
-
